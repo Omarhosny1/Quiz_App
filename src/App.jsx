@@ -77,10 +77,11 @@ const App = () => {
   );
 
   useEffect(() => {
-    fetch("http://localhost:9000/questions")
+    fetch("../data/questions.json")
       .then((res) => res.json())
       .then((data) => {
-        dispatch({ type: "dataReceived", payload: data });
+        console.log(data);
+        dispatch({ type: "dataReceived", payload: data.questions });
       })
       .catch(() => {
         dispatch({ type: "dataFailed" });
