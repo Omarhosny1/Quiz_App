@@ -77,7 +77,7 @@ const App = () => {
   );
 
   useEffect(() => {
-    fetch("../data/questions.json")
+    fetch("./../data/questions.json")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
